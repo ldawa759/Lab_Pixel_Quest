@@ -37,7 +37,11 @@ public class GeoController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Hit");
+        switch (collision.tag)
+        { case "Death":
+                { Debug.Log("Player Has Died"); 
+                  break;}
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
