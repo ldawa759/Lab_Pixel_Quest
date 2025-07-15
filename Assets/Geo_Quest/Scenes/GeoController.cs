@@ -11,7 +11,7 @@ public class GeoController : MonoBehaviour
     private Rigidbody2D rb;
     public int speed = 5;
     public string nextLevel = "Geo_Quest_Scene_1 1";
-
+    public int height = 4;
     // Start is called before the first frame update
      void Start()
     {
@@ -27,8 +27,11 @@ public class GeoController : MonoBehaviour
         //Debug.Log(xSpeed);
         rb.velocity = new Vector2(xSpeed * speed, rb.velocity.y);
 
-        /*
-       if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.velocity = new Vector2(rb.velocity.x, height);
+        }
+       /*if (Input.GetKeyDown(KeyCode.W))
         {transform.position += new Vector3(0, 1, 0); }
        if (Input.GetKeyDown(KeyCode.S))
         { transform.position += new Vector3(0, -1, 0); }

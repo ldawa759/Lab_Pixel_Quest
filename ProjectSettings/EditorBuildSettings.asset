@@ -15,9 +15,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_2.unity
     guid: f9555ef8cf6b50447922872cea2af702
   - enabled: 1
+    path: Assets/Geo_Quest/Scenes/Geo_Quest_Scene_1.unity
+    guid: 8fcbbf205b9dfa043a98c17f73b8a9f0
+  - enabled: 1
     path: Assets/Geo_Quest/Scenes/Geo_Quest_Scene_1 1.unity
     guid: 11b5e6557fac9a44b822c182908dc192
   - enabled: 1
-    path: Assets/Geo_Quest/Scenes/Geo_Quest_Scene_1.unity
-    guid: 8fcbbf205b9dfa043a98c17f73b8a9f0
+    path: Assets/Geo_Quest/Scenes/Geo_Quest_Scene_1 2.unity
+    guid: 4a64caf15b1ef0641b44b4b89c2cfa6e
+  - enabled: 0
+    path: Assets/Geo_Quest/Scenes/Geo_Quest1.2.unity
+    guid: dc192c4160a9fb04794b91551ef8ff15
   m_configObjects: {}
