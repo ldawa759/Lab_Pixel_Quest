@@ -12,10 +12,12 @@ public class GeoController : MonoBehaviour
     public int speed = 5;
     public string nextLevel = "Geo_Quest_Scene_1 1";
     public int height = 4;
+    private SpriteRenderer sr;
     // Start is called before the first frame update
      void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
         string variable2 = "World";
         Debug.Log(variable1 + variable2);
     }
@@ -26,6 +28,14 @@ public class GeoController : MonoBehaviour
         float xSpeed = Input.GetAxis("Horizontal");
         //Debug.Log(xSpeed);
         rb.velocity = new Vector2(xSpeed * speed, rb.velocity.y);
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        { sr.color = Color.yellow; }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        { sr.color = Color.red; }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        { sr.color = Color.blue; }
+
+
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
