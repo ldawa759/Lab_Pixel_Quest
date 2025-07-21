@@ -858,6 +858,9 @@ GameObject:
   - component: {fileID: 524818375}
   - component: {fileID: 524818377}
   - component: {fileID: 524818376}
+  - component: {fileID: 524818380}
+  - component: {fileID: 524818379}
+  - component: {fileID: 524818378}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -953,6 +956,45 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &524818378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524818374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e847d5829d41df94ebfd85885d3238cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLevel: Geo_Quest_Scene_1 1
+--- !u!114 &524818379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524818374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a351f7cffcf6e84faf2d001751ead21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+--- !u!114 &524818380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524818374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0688657c66d0a5d41856646b11bcbc80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JumpForce: 10
 --- !u!1 &559222605
 GameObject:
   m_ObjectHideFlags: 0
