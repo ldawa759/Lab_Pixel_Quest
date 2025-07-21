@@ -6,6 +6,12 @@ public class PlayerJump : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float JumpForce = 10f;
+    public float CapsuleHeight = 0.25f;
+    public float CapsuleRadius = 0.08f;
+
+    public Transform feetCollider;
+    public LayerMask groundMask;
+    private bool _groundCheck;
     // Start is called before the first frame update
     void Start()
     {
