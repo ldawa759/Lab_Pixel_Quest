@@ -20,6 +20,7 @@ public class PlayerJump : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         GravityVector = new Vector2(0, Physics2D.gravity.y);
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -35,5 +36,11 @@ public class PlayerJump : MonoBehaviour
         { 
             rb.velocity = new Vector2(rb.velocity.x, JumpForce); 
         }
+
+if (rb.velocity.y < 0)
+        {
+            rb.velocity += GravityVector * (Fallforce * Time.deltaTime);
+        }
+
     }
 }
