@@ -27,7 +27,7 @@ public class PlayerJump : MonoBehaviour
         CapsuleDirection2D.Horizontal, 0, groundMask);
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && _groundCheck)
         { 
             rb.velocity = new Vector2(rb.velocity.x, JumpForce); 
         }
