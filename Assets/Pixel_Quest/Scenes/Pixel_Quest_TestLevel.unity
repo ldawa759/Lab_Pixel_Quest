@@ -874,7 +874,7 @@ Transform:
   m_GameObject: {fileID: 524818374}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.1, y: -2.48, z: 0.012901574}
+  m_LocalPosition: {x: -10.07, y: -2.48, z: 0.012901574}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -999,7 +999,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1122,7 +1122,7 @@ Transform:
   m_GameObject: {fileID: 639174301}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.1, y: -0.73803186, z: -9.987099}
+  m_LocalPosition: {x: -0.54285336, y: 1.45783, z: -9.987099}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2111,6 +2111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1163540846}
   - component: {fileID: 1163540845}
+  - component: {fileID: 1163540847}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -2136,7 +2137,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 524818375}
+  m_LookAt: {fileID: 0}
   m_Follow: {fileID: 524818375}
   m_Lens:
     FieldOfView: 60
@@ -2166,13 +2167,28 @@ Transform:
   m_GameObject: {fileID: 1163540844}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.1, y: -0.73803186, z: -9.987099}
+  m_LocalPosition: {x: -10.07, y: -0.7380314, z: -9.987099}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1048072112}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1163540847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163540844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BoundingShape2D: {fileID: 559222606}
+  m_Damping: 0.5
+  m_MaxWindowSize: -1
 --- !u!1 &1246743228
 GameObject:
   m_ObjectHideFlags: 0
