@@ -1225,7 +1225,7 @@ GameObject:
   - component: {fileID: 936973919}
   - component: {fileID: 936973918}
   - component: {fileID: 936973917}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2824,7 +2824,7 @@ GameObject:
   - component: {fileID: 2095838997}
   - component: {fileID: 2095838996}
   - component: {fileID: 2095838995}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floating Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
