@@ -21,6 +21,12 @@ public class PlayerJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        _groundCheck = Physics2D.OverlapCapsule(feetCollider.position, 
+        new Vector2(CapsuleHeight, CapsuleRadius), 
+        CapsuleDirection2D.Horizontal, 0, groundMask);
+
+
         if (Input.GetKeyDown(KeyCode.Space))
         { 
             rb.velocity = new Vector2(rb.velocity.x, JumpForce); 
