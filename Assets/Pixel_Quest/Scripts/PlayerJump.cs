@@ -12,6 +12,11 @@ public class PlayerJump : MonoBehaviour
     public float Fallforce;
     Vector2 GravityVector;
 
+
+    private bool _waterCheck;
+    private string _waterTag = "Water";
+
+
     public Transform feetCollider;
     public LayerMask groundMask;
     private bool _groundCheck;
@@ -22,6 +27,18 @@ public class PlayerJump : MonoBehaviour
         GravityVector = new Vector2(0, Physics2D.gravity.y);
         rb = GetComponent<Rigidbody2D>();
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag(_waterTag)) { _waterCheck = true; }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag(_waterTag)) { _waterCheck = false; }
+    }
+
+
 
     // Update is called once per frame
     void Update()
