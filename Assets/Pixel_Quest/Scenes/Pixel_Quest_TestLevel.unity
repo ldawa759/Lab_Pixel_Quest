@@ -998,7 +998,7 @@ MonoBehaviour:
   JumpForce: 10
   CapsuleHeight: 0.25
   CapsuleRadius: 0.08
-  Fallforce: 2
+  Fallforce: 3
   feetCollider: {fileID: 1177927520}
   groundMask:
     serializedVersion: 2
