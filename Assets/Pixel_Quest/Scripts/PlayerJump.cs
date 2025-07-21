@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
@@ -8,6 +9,8 @@ public class PlayerJump : MonoBehaviour
     public float JumpForce = 10f;
     public float CapsuleHeight = 0.25f;
     public float CapsuleRadius = 0.08f;
+    public float Fallforce;
+    Vector2 GravityVector;
 
     public Transform feetCollider;
     public LayerMask groundMask;
@@ -16,6 +19,7 @@ public class PlayerJump : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        GravityVector = new Vector2(0, Physics2D.gravity.y);
     }
 
     // Update is called once per frame
