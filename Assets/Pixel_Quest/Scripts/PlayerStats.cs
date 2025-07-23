@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
-    private int _health = 3;
+    public int _health = 3;
     private int coinCounter = 0;
     public string nextLevel = "Geo_Quest_Scene_1 1";
     public Transform RespawnPoint;
@@ -16,10 +16,16 @@ public class PlayerStats : MonoBehaviour
         {
             case "Health":
                 {
-                    _health++;
-                    Destroy(collision.gameObject);
+                    if (_health < 3)
+                    {
+                        _health++;
+                        Destroy(collision.gameObject);
+                    }
+
+
                     break;
                 }
+                
 
             case "Coin": 
                 {
@@ -34,6 +40,7 @@ public class PlayerStats : MonoBehaviour
                     //string thisLevel = SceneManager.GetActiveScene().name;
                     //SceneManager.LoadScene(thisLevel);
                     //Debug.Log("Player Has Died");
+                    _health--;
                     if (_health <= 0)
                     {
                         string thisLevel = SceneManager.GetActiveScene().name;
