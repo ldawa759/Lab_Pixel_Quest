@@ -7,7 +7,6 @@ public class PlayerStats : MonoBehaviour
 {
     public int _health = 3;
     private int coinCounter = 0;
-    public string nextLevel = "Geo_Quest_Scene_1 1";
     public Transform RespawnPoint;
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -60,6 +59,7 @@ public class PlayerStats : MonoBehaviour
                 }
             case "Finish":
                 {
+                    string nextLevel = collision.transform.GetComponent<LevelGoal>().nextLevel;
                     SceneManager.LoadScene(nextLevel);
                     break;
                 }
