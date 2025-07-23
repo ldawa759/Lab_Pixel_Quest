@@ -14,6 +14,11 @@ public class PlayerStats : MonoBehaviour
     {
         switch (collision.tag)
         {
+            case "Respawn":
+                {
+                    RespawnPoint.position = collision.transform.Find("Point").position;
+                    break;
+                }
             case "Health":
                 {
                     if (_health < 3)
