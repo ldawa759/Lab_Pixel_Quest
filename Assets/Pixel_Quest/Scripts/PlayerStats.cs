@@ -8,6 +8,7 @@ public class PlayerStats : MonoBehaviour
     private int _health = 3;
     private int coinCounter = 0;
     public string nextLevel = "Geo_Quest_Scene_1 1";
+    public Transform RespawnPoint;
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,9 +21,6 @@ public class PlayerStats : MonoBehaviour
                     break;
                 }
 
-
-
-
             case "Coin": 
                 {
                     coinCounter++;
@@ -33,10 +31,20 @@ public class PlayerStats : MonoBehaviour
 
             case "Death":
                 {
-                    string thisLevel = SceneManager.GetActiveScene().name;
-                    SceneManager.LoadScene(thisLevel);
-                    Debug.Log("Player Has Died");
-                    break;
+                    //string thisLevel = SceneManager.GetActiveScene().name;
+                    //SceneManager.LoadScene(thisLevel);
+                    //Debug.Log("Player Has Died");
+                    if (_health <= 0)
+                    {
+                        string thisLevel = SceneManager.GetActiveScene().name;
+                        SceneManager.LoadScene(thisLevel);
+                    }
+                    else
+                    {
+                        transform.position = RespawnPoint.position;
+                    }
+                        break;
+
                 }
             case "Finish":
                 {
