@@ -17,7 +17,7 @@ public class HW2PlayerRotation : MonoBehaviour
     {
         _positionMouse = _camera.ScreenToWorldPoint(Input.mousePosition);
 
-        Vector3 pos = _positionMouse = transform.position;
+        Vector3 pos = _positionMouse;
 
         float rotZ = Mathf.Atan2(pos.y, pos.x) * Mathf.Rad2Deg;
 

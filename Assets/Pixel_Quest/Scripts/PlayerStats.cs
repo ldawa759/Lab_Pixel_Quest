@@ -11,6 +11,7 @@ public class PlayerStats : MonoBehaviour
     private int coinsInLevel = 0;
     public Transform RespawnPoint;
     private PlayerUIController _playerUIController;
+    private AudioController _audioController;
 
     public void Start()
     {
@@ -18,6 +19,7 @@ public class PlayerStats : MonoBehaviour
         _playerUIController = GetComponent<PlayerUIController>();
         _playerUIController.UpdateHealth(_health, _maxHealth);
         _playerUIController.UpdateCoin(coinCounter + "/" + coinsInLevel);
+        _audioController = GetComponent<AudioController>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,6 +28,7 @@ public class PlayerStats : MonoBehaviour
         {
             case "Respawn":
                 {
+                    _audioController.PlayAudio("checkpoint");
                     RespawnPoint.position = collision.transform.Find("Point").position;
                     break;
                 }
@@ -34,6 +37,7 @@ public class PlayerStats : MonoBehaviour
                     if (_health < 3)
                     {
                         _health++;
+                        _audioController.PlayAudio("heart");
                         _playerUIController.UpdateHealth(_health, _maxHealth);
                         Destroy(collision.gameObject);
                     }
@@ -46,6 +50,7 @@ public class PlayerStats : MonoBehaviour
             case "Coin": 
                 {
                     coinCounter++;
+                    _audioController.PlayAudio("coin");
                     _playerUIController.UpdateCoin(coinCounter + "/" + coinsInLevel);
                     Destroy(collision.gameObject);
                     break;
@@ -58,6 +63,7 @@ public class PlayerStats : MonoBehaviour
                     //SceneManager.LoadScene(thisLevel);
                     //Debug.Log("Player Has Died");
                     _health--;
+                    _audioController.PlayAudio("death");
                     _playerUIController.UpdateHealth(_health, _maxHealth);
                     if (_health <= 0)
                     {
